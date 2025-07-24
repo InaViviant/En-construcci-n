@@ -7,12 +7,49 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>En construcción...</h1>
-    <h2>Creando espacio virtual</h2>
+    <div class="game-container">
+        <h1>🐍 SNAKE GAME</h1>
+        
+        <div class="game-info">
+            <div class="score">Puntos: <span id="score">0</span></div>
+            <div class="high-score">Mejor: <span id="highScore">0</span></div>
+        </div>
+
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+        <div class="controls">
+            <div class="empty"></div>
+            <button class="control-btn up" onclick="changeDirection('up')">↑</button>
+            <div class="empty"></div>
+            <button class="control-btn left" onclick="changeDirection('left')">←</button>
+            <button class="control-btn down" onclick="changeDirection('down')">↓</button>
+            <button class="control-btn right" onclick="changeDirection('right')">→</button>
+        </div>
+
+        <div class="instructions">
+            <p>🎮 Usa las flechas del teclado o los botones táctiles</p>
+            <p>🍎 Come las manzanas para crecer y sumar puntos</p>
+            <p>⚠️ No choques con los bordes o contigo mismo</p>
+        </div>
+
+        <div class="start-screen" id="startScreen">
+            <h2>🐍 ¡Bienvenido al Snake!</h2>
+            <p>Controla la serpiente y come tantas manzanas como puedas</p>
+            <button class="start-btn" onclick="startGame()">Iniciar Juego</button>
+        </div>
+
+        <div class="game-over" id="gameOver" style="display: none;">
+            <h2>💀 Game Over</h2>
+            <p>Puntuación final: <span id="finalScore">0</span></p>
+            <p id="newRecord" style="display: none; color: #FFD700;">🎉 ¡Nuevo récord!</p>
+            <button class="restart-btn" onclick="restartGame()">Jugar de Nuevo</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    
 </body>
 
-<footer>
 
-</footer>
 
 </html>
