@@ -1,4 +1,4 @@
- * {
+* {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -133,16 +133,65 @@
 
         @media (max-width: 480px) {
             .game-container {
-                padding: 20px;
-                margin: 20px;
+                padding: 15px;
+                margin: 10px;
+                width: calc(100vw - 20px);
+                max-width: 400px;
             }
             
             h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
+                margin-bottom: 15px;
             }
             
             .game-info {
                 flex-direction: column;
                 gap: 10px;
+                font-size: 1rem;
+            }
+            
+            #gameCanvas {
+                width: 100%;
+                height: auto;
+                max-width: 350px;
+                aspect-ratio: 1;
+            }
+            
+            .controls {
+                max-width: 180px;
+                gap: 8px;
+            }
+            
+            .control-btn {
+                font-size: 1.2rem;
+                padding: 12px;
+            }
+            
+            .instructions {
+                font-size: 0.8rem;
+                margin-top: 15px;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .game-container {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 1.6rem;
+            }
+            
+            #gameCanvas {
+                max-width: 300px;
+            }
+            
+            .controls {
+                max-width: 150px;
+            }
+            
+            .control-btn {
+                font-size: 1rem;
+                padding: 10px;
             }
         }
