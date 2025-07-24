@@ -1,37 +1,39 @@
-* {
+ * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
         body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            font-family: 'Arial', sans-serif;
+            background: #8BAC0F;
+            font-family: 'Courier New', monospace;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            color: white;
+            color: #0F380F;
         }
 
         .game-container {
             text-align: center;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
+            background: #9BBD0F;
+            border-radius: 15px;
             padding: 30px;
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 
+                inset 0 0 0 8px #8BAC0F,
+                inset 0 0 0 12px #306230,
+                0 0 0 4px #0F380F,
+                8px 8px 16px rgba(15, 56, 15, 0.4);
+            border: 4px solid #0F380F;
         }
 
         h1 {
             font-size: 2.5rem;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            background: linear-gradient(45deg, #FFD700, #FFA500);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #0F380F;
+            text-shadow: 2px 2px 0px #8BAC0F;
+            font-weight: bold;
+            letter-spacing: 2px;
         }
 
         .game-info {
@@ -43,17 +45,21 @@
         }
 
         .score, .high-score {
-            background: rgba(255, 255, 255, 0.2);
+            background: #306230;
+            color: #9BBD0F;
             padding: 10px 20px;
-            border-radius: 25px;
-            backdrop-filter: blur(5px);
+            border-radius: 8px;
+            border: 2px solid #0F380F;
+            box-shadow: inset 2px 2px 4px #0F380F;
         }
 
         #gameCanvas {
-            border: 3px solid rgba(255, 255, 255, 0.3);
-            border-radius: 15px;
-            background: rgba(0, 0, 0, 0.3);
-            box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+            border: 4px solid #0F380F;
+            border-radius: 8px;
+            background: #306230;
+            box-shadow: 
+                inset 4px 4px 8px #0F380F,
+                inset -2px -2px 4px #8BAC0F;
         }
 
         .controls {
@@ -66,25 +72,28 @@
         }
 
         .control-btn {
-            background: rgba(255, 255, 255, 0.2);
-            border: none;
-            color: white;
+            background: #8BAC0F;
+            border: 3px solid #0F380F;
+            color: #0F380F;
             font-size: 1.5rem;
+            font-weight: bold;
             padding: 15px;
-            border-radius: 10px;
+            border-radius: 8px;
             cursor: pointer;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.1s ease;
+            box-shadow: 3px 3px 0px #306230;
+            font-family: 'Courier New', monospace;
         }
 
         .control-btn:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: scale(1.05);
+            background: #9BBD0F;
+            transform: translate(1px, 1px);
+            box-shadow: 2px 2px 0px #306230;
         }
 
         .control-btn:active {
-            transform: scale(0.95);
+            transform: translate(3px, 3px);
+            box-shadow: none;
         }
 
         .empty { grid-column: 1; }
@@ -98,37 +107,47 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background: rgba(0, 0, 0, 0.9);
-            color: white;
+            background: #9BBD0F;
+            color: #0F380F;
             padding: 40px;
-            border-radius: 15px;
+            border-radius: 8px;
             text-align: center;
-            backdrop-filter: blur(10px);
+            border: 4px solid #0F380F;
+            box-shadow: 8px 8px 0px #306230;
         }
 
         .start-btn, .restart-btn {
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            color: white;
-            border: none;
+            background: #8BAC0F;
+            color: #0F380F;
+            border: 3px solid #0F380F;
             padding: 15px 30px;
-            border-radius: 25px;
+            border-radius: 8px;
             font-size: 1.1rem;
+            font-weight: bold;
             cursor: pointer;
             margin-top: 20px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: all 0.1s ease;
+            font-family: 'Courier New', monospace;
+            box-shadow: 4px 4px 0px #306230;
         }
 
         .start-btn:hover, .restart-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+            background: #9BBD0F;
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0px #306230;
+        }
+
+        .start-btn:active, .restart-btn:active {
+            transform: translate(4px, 4px);
+            box-shadow: none;
         }
 
         .instructions {
             margin-top: 20px;
             font-size: 0.9rem;
-            opacity: 0.8;
             line-height: 1.4;
+            color: #306230;
+            font-family: 'Courier New', monospace;
         }
 
         @media (max-width: 480px) {
