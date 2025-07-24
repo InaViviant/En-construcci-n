@@ -2,7 +2,7 @@
 
 Este es un pequeño proyecto hecho con **HTML, CSS y JavaScript**, que recrea el clásico juego de la serpiente. El objetivo es simple: controlar la serpiente para que coma las manzanas 🍎 y crezca, ¡sin chocar contra las paredes ni contra ella misma!
 
-👉 **[Jugar ahora](https://inaviviant.github.io/En-construcci-n)**
+👉 **[Jugar ahora](https://inaviviant.github.io/Snake-Game)**
 
 ---
 
